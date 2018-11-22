@@ -24,6 +24,9 @@ class ProductionEvaluation(models.Model):
     cock_level = models.SmallIntegerField(null=True, blank=True, default=0)  # jb水平
     puke_amount = models.SmallIntegerField(null=True, blank=True, default=0)  # 呕吐物量
 
+    def __str__(self):
+        return self.overall_mark
+
 
 class ProductionAddons(models.Model):
     cover_img = models.CharField(max_length=200, null=True, blank=True)
